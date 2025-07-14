@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+
+.hero {
+    position: relative;
+    /* display: inline-block; */
+}
+
+.hero-bg {
+    width: 100%;
+    height: 32rem;
+    display: block;
+}
+
+.text-box {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: -1;
+}
+
+.navbar a {
+    font-size: 1.15rem;
+    font-family: "Montserrat", sans-serif;
+    color: #111111;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+}
+
+#check {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: #111111;
+    cursor: pointer;
+    display: none;
+}
+
+.bracket-box {
+    position: relative;
+    display: inline-block;
+    color: white;
+    font-weight: 700;
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+    padding-left: 2.5rem;
+}
+
+/* Left vertical line */
+.bracket-box::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: white;
+}
+
+/* Top horizontal corner */
+.bracket-box::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 4px;
+    background: white;
+}
+
+/* Bottom horizontal corner */
+.bracket-box h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 25px;
+    height: 4px;
+    background: white;
+}
+
+.container {
+    width: 900px;
+    margin: 20px auto;
+    columns: 2;
+    column-gap: 25px;
+}
+
+.container .box {
+    width: 100%;
+    margin: 0 0 20px;
+    padding: 10px;
+    overflow: hidden;
+    background: #fff;
+    break-inside: avoid;
+    text-align: center;
+}
+
+.container .box img {
+    max-width: 100%;
+}
+
+.container .box h2 {
+    margin: 10px 0 0;
+    padding: 0;
+    font-size: 26px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.container .box h6 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    color: #F4C430;
+}
+
+.container .box p {
+    margin: 0;
+    padding: 0 0 60px;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+}
+
+.box-content {
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1300px;
+    margin: 0 auto;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.content .grid-left {
+    flex: 2;
+    gap: 50px;
+}
+
+.content .sidebar-right {
+    flex: 1;
+}
+
+.bio #avatar {
+    width: 100%;
+}
+
+.bio #signature {
+    width: 60%;
+}
+
+.posts {
+    display: flex;
+    gap: .5rem;
+    padding: .3rem;
+
+}
+
+.posts h5 {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: "Open Sans", sans-serif;
+
+}
+
+.posts p {
+    font-size: 10px;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+}
+
+.posts img {
+    width: 30%;
+}
+
+hr {
+    width: 50px;
+    height: 3px;
+    margin: 10px auto;
+    border: 0;
+    background: #111111;
+}
+
+/*Breakpoints*/
+@media (max-width: 992px) {
+    .header {
+        padding: 1.3rem 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .icons {
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: white;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar {
+        height: 17.7rem;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1.1rem;
+        font-family: "Montserrat", sans-serif;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar a {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(.15s * var(--i));
+    }
+
+    .container {
+        width: 100%;
+    columns: 1;
+    column-gap: 0;
+    }
+
+     .content {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+}
