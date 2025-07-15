@@ -179,13 +179,13 @@ body {
     text-align: center;
 }
 
-.box-1 .box1-content h6{
-     font-family: "Open Sans", sans-serif;
+.box-1 .box1-content h6 {
+    font-family: "Open Sans", sans-serif;
     font-size: 14px;
     color: #F4C430;
 }
 
-.box-1 .box1-content a{
+.box-1 .box1-content a {
     font-size: 1.15rem;
     font-family: "Open Sans", sans-serif;
     color: #111111;
@@ -237,7 +237,7 @@ body {
 .profile {
     display: flex;
     padding: 30px;
-    gap: 20px ;
+    gap: 20px;
 }
 
 .profile img {
@@ -264,44 +264,46 @@ body {
 }
 
 .form .short {
-display: flex;
-gap: 15px;
+    display: flex;
+    gap: 15px;
 }
 
-.form input[type=text], input[type=email], textarea {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #D9D9D9;
-  border-radius: 4px;
-  box-sizing: border-box;
+.form input[type=text],
+input[type=email],
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 .form textarea {
-  width: 100%;
-  height: 114px;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #D9D9D9;
-  border-radius: 4px;
-  box-sizing: border-box;
+    width: 100%;
+    height: 114px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 .form input[type=submit] {
-  width: 30%;
-  background-color: #A03214;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+    width: 30%;
+    background-color: #A03214;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .form input[type=submit]:hover {
-  background-color: #A03214;
+    background-color: #A03214;
 }
 
 
@@ -313,7 +315,7 @@ gap: 15px;
     margin: 0 auto;
     gap: 2rem;
     padding: 2rem;
-        padding-top: 150px;
+    padding-top: 150px;
 
 }
 
@@ -507,4 +509,12 @@ hr {
         width: 40%;
     }
 
+    .footer hr {
+        width: 362px;
+    }
+
+    .footer img {
+        width: 40%;
+
+    }
 }
